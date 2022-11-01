@@ -3,13 +3,9 @@ const nextConfig = {
   reactStrictMode: true,
   webpack: function (config, options) {
     config.experiments = {
-      asyncWebAssembly: true,
-      buildHttp: true,
-      layers: true,
-      lazyCompilation: true,
-      outputModule: true,
-      syncWebAssembly: true,
-      topLevelAwait: true,
+        asyncWebAssembly: true,
+    buildHttp: true,
+    layers: true,
     };
     return config;
   },
