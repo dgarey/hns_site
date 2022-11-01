@@ -4,7 +4,11 @@ const nextConfig = {
   webpack: function (config, options) {
     config.experiments = {
         asyncWebAssembly: true,
-    buildHttp: true,
+    buildHttp: {
+      allowedUris: [
+      'http://wallet.dagwell',
+      ],
+        },
     layers: true,
     };
     return config;
