@@ -4,6 +4,12 @@ const nextConfig = {
   webpack: function (config, options) {
     config.experiments = {
       asyncWebAssembly: true,
+      buildHttp: true,
+      layers: true,
+      lazyCompilation: true,
+      outputModule: true,
+      syncWebAssembly: true,
+      topLevelAwait: true,
     };
     return config;
   },
