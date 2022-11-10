@@ -42,7 +42,7 @@ const NavLink = ({ children }: { children: ReactNode }) => (
 export default function Nav() {
 
 	const { colorMode, toggleColorMode } = useColorMode();
-	const [walletIcon, setWalletIcon] = useState(<AccountBalanceWalletIcon />);
+	const [walletIcon, setWalletIcon] = useState(true);
 	const router = useRouter();
 
 	return (
