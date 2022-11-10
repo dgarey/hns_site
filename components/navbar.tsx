@@ -22,7 +22,6 @@ import {
 import { useRouter } from 'next/router'
 import { MoonIcon, SunIcon } from '@chakra-ui/icons';
 import ConnectWallet from './walletConnect';
-import AccountBalanceWalletIcon from '@mui/icons-material/AccountBalanceWallet';
 
 /* color mode for toggle switch
 const NavLink = ({ children }: { children: ReactNode }) => (
