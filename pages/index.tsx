@@ -2,6 +2,10 @@ import { useState } from "react";
 import type { NextPage } from "next";
 import useWallet from "../contexts/wallet";
 import ConnectWallet from "../components/connectWallet";
+import DonateButton from '../components/transactions/donateButton';
+import {
+  Box, Heading, Text, Link, Spinner, Center, Flex, Spacer, Grid, GridItem
+} from '@chakra-ui/react'
 
 const Home: NextPage = () => {
   const { wallet, walletConnected, connecting } = useWallet();
@@ -17,36 +21,15 @@ const Home: NextPage = () => {
     }
   }
 
-  return (
-    <div>
-      <h1>Connect Wallet</h1>
-      <ConnectWallet />
-      {walletConnected && (
-        <>
-          <h1>Get Wallet Assets</h1>
-          {assets ? (
-            <pre>
-              <code className="language-js">
-                {JSON.stringify(assets, null, 2)}
-              </code>
-            </pre>
-          ) : (
-            <button
-              type="button"
-              onClick={() => getAssets()}
-              disabled={connecting || loading}
-              style={{
-                margin: "8px",
-                backgroundColor: connecting || loading ? "orange" : "grey",
-              }}
-            >
-              Get Wallet Assets
-            </button>
-          )}
-        </>
-      )}
-    </div>
-  );
-};
 
-export default Home;
+    return (
+      <Grid templateColumns='repeat(5, 1fr)' gap='10'>
+        <GridItem colSpan={3}><ConnectWallet /></GridItem>
+        <GridItem colSpan={3}><DonateButton /></GridItem>
+      </Grid>
+
+
+    )
+  }
+
+  export default Home
