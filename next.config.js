@@ -6,8 +6,9 @@ const nextConfig = {
         asyncWebAssembly: true,
     buildHttp: {
       allowedUris: [
-      'http://wallet.dagwell',
-      ],
+      'http://969169ef2a833a.dagwell/',
+        'http://wallet.dagwell',
+        ],
         },
     layers: true,
     };
