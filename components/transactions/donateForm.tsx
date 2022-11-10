@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import {
     Box, Heading, Text, Input, FormControl, Button, Center, Spinner
 } from "@chakra-ui/react"
-import { useFormik } from "formik";
+import { useFormik } from '@formik';
 import useWallet from "../../contexts/wallet";
 import { Transaction } from '@martifylabs/mesh'
 
